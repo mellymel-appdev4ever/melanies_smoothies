@@ -15,7 +15,7 @@ st.write('The name on your Smoothie will be:', name_on_order)
 
 
 session = st.connection("snowflake") 
-temp_dataframe = session.query("SELECT * from ORDERS;", ttl=600)
+test_connection_df = session.query("SELECT 'hello';", ttl=600)
 
 st.stop()
 
