@@ -13,9 +13,10 @@ name_on_order = st.text_input('Name on Smoothie:')
 st.write('The name on your Smoothie will be:', name_on_order)
 
 
+conn = st.connection("snowflake")
+df = conn.query("select 1")
+st.dataframe(df)
 
-session = st.connection("snowflake") 
-test_connection_df = session.query("SELECT 'hello';", ttl=600)
 
 st.stop()
 
