@@ -25,7 +25,7 @@ ingredients_list = st.multiselect(
     )
 
 if ingredients_list: 
-    ingredients_string = ''
+	ingredients_string = ''
 
 	for fruit_chosen in ingredients_list:
 		ingredients_string += fruit_chosen + ' '
@@ -35,7 +35,7 @@ if ingredients_list:
 	
 
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
-            values ('""" + ingredients_string + """','"""+name_on_order+ """')"""
+    	values ('""" + ingredients_string + """','"""+name_on_order+ """')"""
 
     # st.write(my_insert_stmt)
     # st.stop()
@@ -47,8 +47,5 @@ if ingredients_list:
 	
         st.success('Your Smoothie is ordered, '+name_on_order+'!', icon="✅")
 
-# New section to display fruityvice nutrition information
 
-
-# st.text(fruityvice_response.json())
 
